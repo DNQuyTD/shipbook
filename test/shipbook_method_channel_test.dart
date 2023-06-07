@@ -5,7 +5,7 @@ import 'package:shipbook/src/shipbook_method_channel.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelShipbook platform = MethodChannelShipbook();
+  final MethodChannelShipbook platform = MethodChannelShipbook();
   const MethodChannel channel = MethodChannel('shipbook');
 
   setUp(() {

@@ -7,24 +7,24 @@ import 'shipbook_platform_interface.dart';
 class MethodChannelShipbook extends ShipbookPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('shipbook');
+  final MethodChannel methodChannel = const MethodChannel('shipbook');
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version =
+    final String? version =
         await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
   @override
   Future<void> start(String appId, String appKey) async {
-    await methodChannel
-        .invokeMethod<String>('start', {'appId': appId, 'appKey': appKey});
+    await methodChannel.invokeMethod<String>(
+        'start', <String, String>{'appId': appId, 'appKey': appKey});
   }
 
   @override
   Future<void> i(String tag, String message) async {
-    await methodChannel
-        .invokeMethod<String>('i', {'tag': tag, 'message': message});
+    await methodChannel.invokeMethod<String>(
+        'i', <String, String>{'tag': tag, 'message': message});
   }
 }

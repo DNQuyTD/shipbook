@@ -1,7 +1,7 @@
 name: shipbook
-description: Shipbook intergration.
+description: This package provides a `Shipbook` class which can log your message to shipbook server.
 version: 0.0.1
-homepage:
+homepage: https://github.com/DNQuyTD/shipbook
 
 environment:
   sdk: '>=3.0.1 <4.0.0'

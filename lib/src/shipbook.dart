@@ -5,7 +5,7 @@ class Shipbook {
     return ShipbookPlatform.instance.getPlatformVersion();
   }
 
-  static Future<void> start(String appId, String appKey) async {
-    return await ShipbookPlatform.instance.start(appId, appKey);
+  static Future<void> start(String appId, String appKey) {
+    return ShipbookPlatform.instance.start(appId, appKey);
   }
 }
