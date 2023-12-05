@@ -40,35 +40,50 @@ public class ShipbookPlugin: NSObject, FlutterPlugin {
 
   private func e(_ call: FlutterMethodCall,_ result: @escaping FlutterResult) {
       let arguments = call.arguments as! Dictionary<String, Any>
+      let tag = arguments["tag"] as! String;
       let message = arguments["message"] as! String;
-      Log.e(message);
+
+      fileprivate let log = ShipBook.getLogger(tag);
+      log.e(message);
       result(nil)
   }
 
   private func w(_ call: FlutterMethodCall,_ result: @escaping FlutterResult) {
       let arguments = call.arguments as! Dictionary<String, Any>
+      let tag = arguments["tag"] as! String;
       let message = arguments["message"] as! String;
+
+      fileprivate let log = ShipBook.getLogger(tag);
       Log.w(message);
       result(nil)
   }
 
   private func i(_ call: FlutterMethodCall,_ result: @escaping FlutterResult) {
       let arguments = call.arguments as! Dictionary<String, Any>
+      let tag = arguments["tag"] as! String;
       let message = arguments["message"] as! String;
+
+      fileprivate let log = ShipBook.getLogger(tag);
       Log.i(message);
       result(nil)
   }
 
   private func d(_ call: FlutterMethodCall,_ result: @escaping FlutterResult) {
       let arguments = call.arguments as! Dictionary<String, Any>
+      let tag = arguments["tag"] as! String;
       let message = arguments["message"] as! String;
+
+      fileprivate let log = ShipBook.getLogger(tag);
       Log.d(message);
       result(nil)
   }
 
   private func v(_ call: FlutterMethodCall,_ result: @escaping FlutterResult) {
       let arguments = call.arguments as! Dictionary<String, Any>
+      let tag = arguments["tag"] as! String;
       let message = arguments["message"] as! String;
+
+      fileprivate let log = ShipBook.getLogger(tag);
       Log.v(message);
       result(nil)
   }
