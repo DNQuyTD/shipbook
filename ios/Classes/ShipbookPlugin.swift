@@ -54,7 +54,7 @@ public class ShipbookPlugin: NSObject, FlutterPlugin {
       let message = arguments["message"] as! String;
 
       let log = ShipBook.getLogger(tag);
-      Log.w(message);
+      log.w(message);
       result(nil)
   }
 
@@ -64,7 +64,7 @@ public class ShipbookPlugin: NSObject, FlutterPlugin {
       let message = arguments["message"] as! String;
 
       let log = ShipBook.getLogger(tag);
-      Log.i(message);
+      log.i(message);
       result(nil)
   }
 
@@ -74,7 +74,7 @@ public class ShipbookPlugin: NSObject, FlutterPlugin {
       let message = arguments["message"] as! String;
 
       let log = ShipBook.getLogger(tag);
-      Log.d(message);
+      log.d(message);
       result(nil)
   }
 
@@ -84,7 +84,7 @@ public class ShipbookPlugin: NSObject, FlutterPlugin {
       let message = arguments["message"] as! String;
 
       let log = ShipBook.getLogger(tag);
-      Log.v(message);
+      log.v(message);
       result(nil)
   }
 }
